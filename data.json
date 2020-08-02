@@ -1,0 +1,26 @@
+{
+  "currentType": "default",
+  "default": {
+    "session": {
+      "one": -2209058232000,
+      "two": -2209040232000
+    }
+  },
+  "friday": {
+    "session": {
+      "one": -2209061832000,
+      "two": -2209040232000
+    }
+  },
+  "saturday": {
+    "session": {
+      "one": -2209058232000,
+      "two": -2209040232000
+    }
+  },
+  "project": {
+    "session": {
+      "two": -2209040232000
+    }
+  }
+}
