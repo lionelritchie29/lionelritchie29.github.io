@@ -51,7 +51,7 @@ function requestNotificationPermission() {
 }
 
 function fetchSchedule() {
-  fetch("http://winterwoods.my.id/data.json")
+  fetch("https://lionelritchie29.github.io/data.json")
     .then((response) => response.json())
     .then((json) => {
       schedules = json;
@@ -159,3 +159,26 @@ const initBot = () => {
 };
 
 initBot();
+
+// Test bot
+document.getElementById("test-notif-1").onclick = () => {
+  showNotif("Hello!", "Anti Salah Kumpul Bot Initated\n", "icon", "");
+};
+
+document.getElementById("test-notif-2").onclick = () => {
+  showNotif(
+    "Reminder Session One!",
+    "Please Upload Your Answer Now!",
+    "normalbot",
+    "notif-img"
+  );
+};
+
+document.getElementById("test-notif-3").onclick = () => {
+  showNotif(
+    "Reminder Session Two!",
+    "You are not checking your uploaded answer yet!\nPlease check it now!",
+    "angrybot",
+    "last-notif-img"
+  );
+};
