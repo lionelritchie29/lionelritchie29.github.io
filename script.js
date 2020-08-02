@@ -11,9 +11,13 @@ let sessionTwo = null; //date
 const checkedElement = document.getElementById("checkbox");
 const minuteTolerated = 5;
 
+function getZero(i) {
+  return i < 10 ? "0" + i : i;
+}
+
 function startTime(hour, minutes, seconds) {
   document.getElementById("txt").innerHTML =
-    hour + ":" + minutes + ":" + seconds;
+    getZero(hour) + ":" + getZero(minutes) + ":" + getZero(seconds);
 }
 
 function showNotif(title, body, icon, image) {
