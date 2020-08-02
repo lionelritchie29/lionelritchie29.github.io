@@ -51,7 +51,7 @@ function requestNotificationPermission() {
 }
 
 function fetchSchedule() {
-  fetch("https://lionelritchie29.github.io/data.json")
+  fetch("./data.json")
     .then((response) => response.json())
     .then((json) => {
       schedules = json;
