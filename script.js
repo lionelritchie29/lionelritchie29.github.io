@@ -11,6 +11,21 @@ let sessionTwo = null; //date
 const checkedElement = document.getElementById("checked");
 const minuteTolerated = 5;
 
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function startTime(hour, minutes, seconds) {
+  hour = checkTime(hour);
+  min = checkTime(minutes);
+  sec = checkTime(seconds);
+  document.getElementById("txt").innerHTML =
+    hour + ":" + minutes + ":" + seconds;
+}
+
 function showNotif(title, body, icon, image) {
   // show notification
   const options = {
@@ -149,6 +164,7 @@ const startLoop = () => {
     seconds = date.getSeconds();
 
     setNotif(hour, minutes, seconds);
+    startTime(hour, minutes, seconds);
   }, 1000);
 };
 

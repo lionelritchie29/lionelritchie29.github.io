@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Amaranth", sans-serif;
+  background-image: linear-gradient(to top, #b2ebf2, #00bcd4);
+}
+
+#box1 {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 114, 225, 0.6),
+    rgba(0, 25, 255, 0.6)
+  );
+  border-radius: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+#txt {
+  font-size: 50px;
+  text-align: center;
+  font-family: monospace;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+}
+
+#checkbox {
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#checkbox::after {
+  background-color: green;
+}
+
+p {
+  font-size: 25px;
+  color: white;
+  margin-top: 30px;
+}
+
+.heading,
+.motto {
+  color: #333;
+}
+
+.motto {
+  margin-top: 25px;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(0, 114, 225);
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(0, 25, 255);
+}
+
+.btn-container {
+  margin-top: 30px;
+}
