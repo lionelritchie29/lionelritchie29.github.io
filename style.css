@@ -90,3 +90,13 @@ p {
 .btn-container {
   margin-top: 30px;
 }
+
+.link {
+  text-decoration: none;
+  color: red;
+}
+
+.link:hover {
+  color: blue;
+  text-decoration: underline;
+}

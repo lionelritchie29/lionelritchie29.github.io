@@ -8,20 +8,10 @@
 let schedules = null; //json object
 let sessionOne = null; //date
 let sessionTwo = null; //date
-const checkedElement = document.getElementById("checked");
+const checkedElement = document.getElementById("checkbox");
 const minuteTolerated = 5;
 
-function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
-  }
-  return i;
-}
-
 function startTime(hour, minutes, seconds) {
-  hour = checkTime(hour);
-  min = checkTime(minutes);
-  sec = checkTime(seconds);
   document.getElementById("txt").innerHTML =
     hour + ":" + minutes + ":" + seconds;
 }
@@ -74,7 +64,7 @@ function fetchSchedule() {
     });
 }
 
-const setSession = () => {
+function setSession() {
   if (schedules.currentType === "default") {
     sessionOne = new Date(schedules.default.session.one);
     sessionTwo = new Date(schedules.default.session.two);
@@ -87,10 +77,10 @@ const setSession = () => {
   } else if (schedules.currentType === "project") {
     sessionTwo = new Date(schedules.project.session.two);
   }
-};
+}
 
 //main logic dari notifnya
-const setNotif = (hour, minutes, seconds) => {
+function setNotif(hour, minutes, seconds) {
   setSession();
 
   // kondisi : tampilin notif selama satu menit dg interval 10 detik
@@ -149,9 +139,9 @@ const setNotif = (hour, minutes, seconds) => {
       "last-notif-img"
     );
   }
-};
+}
 
-const startLoop = () => {
+function startLoop() {
   let date = null;
   let hour = null;
   let minutes = null;
@@ -166,13 +156,13 @@ const startLoop = () => {
     setNotif(hour, minutes, seconds);
     startTime(hour, minutes, seconds);
   }, 1000);
-};
+}
 
-const initBot = () => {
+function initBot() {
   requestNotificationPermission();
   fetchSchedule();
   startLoop();
-};
+}
 
 initBot();
 
