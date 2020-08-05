@@ -79,6 +79,7 @@ function setSession() {
     sessionOne = new Date(schedules.saturday.session.one);
     sessionTwo = new Date(schedules.saturday.session.two);
   } else if (schedules.currentType === "project") {
+    sessionOne = new Date(schedules.project.session.one);
     sessionTwo = new Date(schedules.project.session.two);
   }
 }
