@@ -9,6 +9,7 @@ let schedules = null; //json object
 let sessionOne = null; //date
 let sessionTwo = null; //date
 const checkedElement = document.getElementById("checkbox");
+const current = document.getElementById("current");
 const minuteTolerated = 5;
 
 function getZero(i) {
@@ -160,6 +161,7 @@ function startLoop() {
 
     setNotif(hour, minutes, seconds);
     startTime(hour, minutes, seconds);
+    current.innerText = schedules.currentType;
   }, 1000);
 }
 
