@@ -100,3 +100,59 @@ p {
   color: blue;
   text-decoration: underline;
 }
+
+.list-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.list {
+  width: 100%;
+  text-align: center;
+}
+
+thead th {
+  background-color: #0f4c75;
+  color: white;
+}
+
+thead th {
+  padding: 10px 0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #00bcd4;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e4e3e3;
+}
+
+tbody tr td {
+  padding: 10px 0;
+  color: #333;
+}
+
+.save-btn,
+.reset-btn {
+  padding: 7px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: teal;
+  color: white;
+}
+
+.save-btn:hover {
+  background: orangered;
+  cursor: pointer;
+}
+
+.reset-btn {
+  margin-left: 1rem;
+  background-color: orangered;
+}
+
+.reset-btn:hover {
+  background-color: red;
+  cursor: pointer;
+}

@@ -90,6 +90,7 @@ function setNotif(hour, minutes, seconds) {
   setSession();
 
   // kondisi : tampilin notif selama satu menit dg interval 10 detik
+
   const isSessionOne =
     hour == sessionOne.getHours() &&
     seconds % 10 == 0 &&
@@ -143,6 +144,15 @@ function setNotif(hour, minutes, seconds) {
       "You are not checking your uploaded answer yet!\nPlease check it now!",
       "angrybot",
       "last-notif-img"
+    );
+  }
+
+  if (isRestIn) {
+    showNotif(
+      "Reminder Rest In!",
+      "Don't forget to rest in!",
+      "normalbot",
+      "notif-img"
     );
   }
 }
